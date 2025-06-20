@@ -9,7 +9,7 @@
             color: white;
             font-size: 12px;
             font-family: Papyrus;
-            
+
         }
         button{
             color: white;
@@ -19,13 +19,14 @@
             width: 90%;
             height: 90%;
             transform: rotate(120deg);
+            z-index: 10px;
         }
     </style>
 </head>
 
 <body>
     <div id="app">
-        <p>Dog of the day</p>
+        <h1>Dog of the day</h1>
             <img v-if="dogImage" :src="dogImage">
             <p> Name: {{name}}</p>
             <p>Size: {{size}}</p>
