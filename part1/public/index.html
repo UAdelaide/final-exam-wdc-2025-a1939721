@@ -23,6 +23,7 @@
         <p>Dog of the day</p>
             <img v-if="dogImage" :src="dogImage">
             <p> Name: {{name}}</p>
+            <br>
             <p>Size: {{size}}</p>
             <p>Owner Username: {{username}}</p>
             <button @click="fetchDogImage">.</button>
