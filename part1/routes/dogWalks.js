@@ -53,7 +53,7 @@ router.get('/walkers/summary', async (req, res) => {
             AVG(wRate.rating) AS average_rating,
             COUNT(wReq.request_id) AS completed_walks
             FROM Users u
-            LEFT JOIN WalkAllications wa ON u.user_id = wa.walker_id AND wa.status = .'accepted'
+            LEFT JOIN WalkAllications wa ON u.user_id = wa.walker_id AND wa.status = 'accepted'
             LEFT JOIN WalkRequests wReq ON wa.request_id = wReq.request_id AND wReq.status = 'completed'
             LEFT JOIN WalkRatings wRate ON wRate.walker_id = u.user_id AND wRank.request_id = wReq.request_id
             `);
