@@ -49,8 +49,6 @@ router.get('/walkers/summary', async (req, res) => {
             d.name AS total_ratings,
             wr.average_rating,
             wr.completed_walks,
-            wr.location,
-            u.username As owner_username
             FROM WalkRequests wr
             JOIN Dogs d ON wr.dog_id = d.dog_id
             JOIN Users u ON d.owner_id = u.user_id
