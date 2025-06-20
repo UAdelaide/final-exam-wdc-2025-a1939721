@@ -31,7 +31,7 @@ router.get('/walkrequests/open', async (req, res) => {
             u.username As owner_username
             FROM WalkRequests wr
             JOIN
-            Dogs d ON wr.dog_id
+            Dogs d ON wr.dog_id = d.dog_id
             Users u ON d.owner_id = u.user_id
             `);
             res.json(rows);
