@@ -41,7 +41,10 @@
                     this.dogImage = data.message;
                 });
             }
-        })
+        },
+        mounted(){
+            this.fetchDogImage();
+        }
     </script>
 
 </body>
