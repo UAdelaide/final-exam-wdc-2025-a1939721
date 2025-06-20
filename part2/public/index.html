@@ -61,17 +61,8 @@
             error.value = '';
             form.value = {
               username: '',
-              requested_time: '',
-              duration_minutes: '',
-              location: ''
+              password: ''
             };
-            loadWalks();
-          } catch (err) {
-            error.value = err.message;
-            message.value = '';
-          }
-        }
-
 
         return {
           form,
