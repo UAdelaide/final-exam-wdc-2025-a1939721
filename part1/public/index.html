@@ -15,9 +15,9 @@
     <div id="app">
         <p>Dog</p>
             <img v-if="dogImage" src="dogImage" alt="">
-            <p> Name{Name: Max}</p>
-            <p>Size: Medium</p>
-            <p>Owner Username: alice123</p>
+            <p> Name: {{name}}</p>
+            <p>Size: {{size}}</p>
+            <p>Owner Username: {{username}}</p>
     </div>
 
     <button @click="fetchDogImage">__</button>
