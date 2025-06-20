@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var db = require('../db');
 
+// Q6
 router.get('/dogs', async (req, res) => {
     try {
         const [rows] = await db.query(`
@@ -19,6 +20,7 @@ router.get('/dogs', async (req, res) => {
     }
 });
 
+// Q7
 router.get('/walkrequests/open', async (req, res) => {
     try {
         const [rows] = await db.query(`
@@ -41,7 +43,7 @@ router.get('/walkrequests/open', async (req, res) => {
     }
 });
 
-
+// Q8
 router.get('/walkers/summary', async (req, res) => {
     try {
         const [rows] = await db.query(`
