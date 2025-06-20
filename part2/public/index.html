@@ -35,7 +35,7 @@
   </div>
 
   <script>
-    const { createApp, ref, onMounted } = Vue;
+    const { createApp, ref } = Vue;
 
     createApp({
       setup() {
@@ -85,9 +85,7 @@
           }
         }
 
-        onMounted(() => {
-          loadWalks();
-        });
+
 
         return {
           form,
