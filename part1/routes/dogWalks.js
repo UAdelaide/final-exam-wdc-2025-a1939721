@@ -49,7 +49,7 @@ router.get('/walkers/summary', async (req, res) => {
             d.name AS total_ratings,
             wr.average_rating,
             wr.completed_walks,
-            FROM WalkRequests wr
+            FROM WalkRatings wRate
             JOIN Users u ON d.owner_id = u.user_id
             WHERE wr.status = 'open'
             `);
