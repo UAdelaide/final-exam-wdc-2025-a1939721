@@ -3,5 +3,9 @@ var router = express.Router();
 var db = require('../db');
 
 router.get('/dogs', async (req, res) => {
-    const
+    try {
+        const [rows] = await db.query{`
+            `
+        }
+    }
 });
