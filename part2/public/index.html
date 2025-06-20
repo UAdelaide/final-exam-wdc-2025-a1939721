@@ -13,9 +13,9 @@
     <h1 class="mb-4 text-primary">{{ message }}</h1>
 
     <div class="card mb-4">
-      
+
       <div class="card-body">
-        <form @submit.prevent="submitWalkRequest">
+        <form @submit.prevent="submitLogin">
           <div class="mb-3">
             <label class="form-label">Dog ID</label>
             <input v-model="form.dog_id" type="number" class="form-control" required>
