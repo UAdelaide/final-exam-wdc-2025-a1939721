@@ -26,7 +26,7 @@ router.get('/walkrequests/open', async (req, res) => {
             d.name AS request_id,
             d.size AS dog_name,
             u.username AS requested_time,
-            u.username AS duration_minutes,
+            wr.duration_minutes,
             FROM Dogs d
             JOIN Users u ON d.owner_id = u.user_id
             `);
