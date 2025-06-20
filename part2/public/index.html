@@ -64,6 +64,14 @@
               password: ''
             };
 
+            loadWalks();
+          } catch (err) {
+            error.value = err.message;
+            message.value = '';
+          }
+        }
+
+
         return {
           form,
           walks,
