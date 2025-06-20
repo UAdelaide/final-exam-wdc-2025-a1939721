@@ -11,8 +11,8 @@ router.get('/dogs', async (req, res) => {
             `);
             res.json(rows);
     } catch(err){
-        console.error('Error fetching data');
-        res.status(500).json({ error:'Server error'});
+        console.error('Error fetching data', err);
+        res.status(500).json({error:'Server error'});
     }
 });
 
