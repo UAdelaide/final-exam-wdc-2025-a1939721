@@ -46,9 +46,9 @@
         const message = ref('');
         const error = ref('');
 
-        async function submitWalkRequest() {
+        async function submitLogin() {
           try {
-            const res = await fetch('/api/walks', {
+            const res = await fetch('/api/login', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify(form.value)
