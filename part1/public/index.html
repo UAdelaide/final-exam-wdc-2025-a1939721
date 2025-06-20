@@ -15,13 +15,13 @@
     <div id="app">
         <p>Dog</p>
             <img v-if="dogImage" src="dogImage" alt="">
-            <p>Name: Max</p>
+            <p>{Name: Max}</p>
             <p>Size: Medium</p>
             <p>Owner Username: alice123</p>
     </div>
 
     <button @click="fetchDogImage">__</button>
-    
+
     <script>
         const{ createApp } = Vue;
         createApp({
