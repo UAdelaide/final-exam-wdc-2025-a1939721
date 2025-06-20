@@ -27,6 +27,8 @@ router.get('/walkrequests/open', async (req, res) => {
             d.name AS dog_name,
             wr.requested_time,
             wr.duration_minutes,
+            wr.location,
+            u.
             FROM WalkRequests wr
             JOIN Users u ON d.owner_id = u.user_id
             `);
