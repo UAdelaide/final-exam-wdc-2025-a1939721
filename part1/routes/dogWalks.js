@@ -56,6 +56,9 @@ router.get('/walkers/summary', async (req, res) => {
             LEFT JOIN WalkApplications wa ON u.user_id = wa.walker_id AND wa.status = 'accepted'
             LEFT JOIN WalkRequests wReq ON wa.request_id = wReq.request_id AND wReq.status = 'completed'
             LEFT JOIN WalkRatings wRate ON wRate.walker_id = u.user_id AND wRate.request_id = wReq.request_id
+            WHERE u.role = 'walker'
+            GROUP BY
+            u.user_id, u.username
             `);
             res.json(rows);
     } catch(err){
