@@ -5,7 +5,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var dogWalkRouter = require('./routes/dogs');
+var dogRouter = require('./routes/dogs');
 
 var app = express();
 
@@ -17,6 +17,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/api', dogWalkRouter);
+app.use('/api/dogs', dogRouter);
 
 module.exports = app;
