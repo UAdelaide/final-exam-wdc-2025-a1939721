@@ -45,7 +45,7 @@ router.get('/walkers/summary', async (req, res) => {
     try {
         const [rows] = await db.query(`
             SELECT
-            wr.request_id,
+            wr.request_id AS walker_username,
             d.name AS dog_name,
             wr.requested_time,
             wr.duration_minutes,
