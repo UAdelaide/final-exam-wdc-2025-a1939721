@@ -48,7 +48,7 @@ router.get('/walkers/summary', async (req, res) => {
             u.username AS walker_username,
             COUNT(wRate.rating_id) AS total_ratings,
             AVG(wRate.rating) AS average_rating,
-            COUNT()wr.completed_walks AS completed_walks
+            COUNT(wReq.) AS completed_walks
             FROM Users u
             JOIN Users u ON d.owner_id = u.user_id
             `);
