@@ -4,10 +4,9 @@ const db = require('../models/db');
 
 // POST /api/login
 router.post('/login', async (req, res) =>{
-    const { username, password } req.body;
-})
+    const { username, password } = req.body;
 
-try{
+    try{
     const [rows] = awaitdb.query(`
         SELECT role FROM Users
         WHERE username = ? AND password_hash = ?
@@ -20,5 +19,5 @@ try{
 
         res.json({nessage: 'Login successful', user: row[0].role });
 }
-
+})
 module.exports = router;
