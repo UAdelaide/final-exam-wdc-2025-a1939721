@@ -33,7 +33,7 @@ router.get('/mydogs', async (req, res) => {
             SELECT
             d.dog_id,
             d.name
-            FROM Dogs
+            FROM Dogs d
             WHERE owner_id = ?`, [user_id]);
             res.json(rows);
     } catch(err){
