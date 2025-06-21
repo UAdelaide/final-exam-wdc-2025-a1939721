@@ -70,8 +70,8 @@ router.post('/logout', (req, res) => {
       return res.status(500).json({'Logout failed'});
     }
     res.clearCookie();
-    res.json{{}}
-  })
+    res.json{{ message: 'Logout successful'}};
+  });
 });
 
 module.exports = router;
