@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../models/db');
 
 // POST /api/login
-router.post('/login', async (req, res) =>{
+router.post('/login', async (req, res) => {
     const { username, password } = req.body;
 
     try{
