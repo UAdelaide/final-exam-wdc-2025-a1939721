@@ -76,7 +76,8 @@
             dogs.value = await res.json();
 
             for(let dog of dogs.value){
-              
+              const photoRes = await fetch ('https://dog.ceo/api/breeds/image/random');
+              const photoData 
             }
           }
         })
