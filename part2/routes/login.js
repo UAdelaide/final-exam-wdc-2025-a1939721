@@ -15,7 +15,9 @@ try{
         `,
         [username, password]);
 
-        if
+        if(rows.length === 0){
+            return
+        }
 }
 
 module.exports = router;
