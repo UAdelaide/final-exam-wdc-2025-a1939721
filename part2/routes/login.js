@@ -25,7 +25,6 @@ router.post('/login', async (req, res) =>{
         console.error('Login error:', err);
         res.status(500).json({error: 'Server error'});
     }
-}
-}
-})
+});
+
 module.exports = router;
