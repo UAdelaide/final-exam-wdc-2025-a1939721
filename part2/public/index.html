@@ -62,7 +62,7 @@
 
             if (!res.ok) throw new Error(result.error || 'Error logging in');
 
-            message.value = result.message;
+            message.value = result.message || 'Login successful.';
             error.value = '';
             form.value = {
               username: '',
