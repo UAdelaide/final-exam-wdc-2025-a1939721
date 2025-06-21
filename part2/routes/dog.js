@@ -22,6 +22,7 @@ router.get('/dogs', async (req, res) => {
 });
 
 router.get('/mydogs', async (req, res) => {
+    const user_id = req.session.user.user_id;
     try {
         const [rows] = await db.query(`
             SELECT
