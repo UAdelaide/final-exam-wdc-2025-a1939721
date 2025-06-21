@@ -58,6 +58,9 @@
               password: ''
             };
 
+            const message = ref('');
+            const error = ref('');
+
             // redirect to the respective page
             if(result.user.role === 'owner'){
               window.location.href = '/owner-dashboard.html';
