@@ -69,7 +69,11 @@
         const error = ref('');
 
         // Fetch dogs
-        
+        onMounted(async () => {
+          try{
+            const res = await fetch('/api/dogs')
+          }
+        })
 
         async function submitLogin() {
           try {
