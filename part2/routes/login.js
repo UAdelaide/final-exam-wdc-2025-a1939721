@@ -3,6 +3,6 @@ const router = express.Router();
 const db = require('../models/db');
 
 // POST login
-router.
+router.post('/login', async (requestAnimationFrame, res))
 
 module.exports = router;
