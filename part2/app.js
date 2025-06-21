@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(
     session({
-        secret: process.env.SESSION_SECRET || 'dogwalk-secret',
+        secret: process.env.SESSION_SECRET || '',
         resave: false,
         saveUninitialized: false,
         cookie: {httpOnly: true, maxAge: 1000 * 60 * 60}
