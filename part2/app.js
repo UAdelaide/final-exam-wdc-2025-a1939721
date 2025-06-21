@@ -14,11 +14,9 @@ app.use(
         secret: process.env.SESSION_SECRET || 'dogwalk-secret',
         resave: false,
         saveUninitialized: false,
-        cookie: { httpOnly: true, maxAge: 1000 * 60 * 60 }
+        cookie: {httpOnly: true, maxAge: 1000 * 60 * 60}
     })
 );
-
-
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
