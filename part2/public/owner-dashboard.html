@@ -141,12 +141,13 @@
             myDogs.value = await res.json();
           }catch (err){
             error.value = err.message;
-                    }
+          }
         }
 
 
         onMounted(() => {
           loadWalks();
+          loadMyDogs();
         });
 
         return {
