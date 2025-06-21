@@ -16,8 +16,7 @@ try{
         [username, password]);
 
         if(rows.length === 0){
-            return
-            res.status(401).json({error: 'Invalid credetials'})
+            return res.status(401).json({error: 'Invalid credentials'})
         }
 }
 
