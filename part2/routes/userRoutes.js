@@ -67,7 +67,8 @@ router.post('/login', async (req, res) => {
 router.post('/logout', (req, res) => ){
   req.session.destroy(err => {
     if(err){
-      console.erro
+      console.error('Failed to end the session');
+      ret8r
     }
   })
 }
