@@ -29,10 +29,11 @@
     </div>
 
     <br>
-    
+
     <!-- table -->
     <h1>All Registered Dogs</h1>
     <table v-if="dog.oilength">
+      <thread>
       <tr>
         <th>Dog ID</th>
         <th>Name</th>
@@ -40,6 +41,7 @@
         <th>Owner ID</th>
         <th>Photo</th>
       </tr>
+      </thread>
     </table>
     <tbody>
       <tr v-for="dog in dogs" :key="dog.dog_id">
