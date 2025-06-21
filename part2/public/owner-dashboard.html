@@ -116,7 +116,13 @@
           }
         };
 
-        const logout = async ()
+        const logout = async () => {
+          try{
+            await fetch('/api/users/logout', {
+              method: 'POST'
+            })
+          }
+        }
 
         onMounted(() => {
           loadWalks();
