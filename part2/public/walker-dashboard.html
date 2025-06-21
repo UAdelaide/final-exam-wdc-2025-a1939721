@@ -45,7 +45,7 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
-        const currentUuser = ref({});
+        const currentUser = ref({});
 
         async function loadWalkRequests() {
           try {
@@ -114,7 +114,7 @@
           error,
           logout,
           applyToWalk,
-          getCurrentUser
+          currentUser
         };
       }
     }).mount('#app');
