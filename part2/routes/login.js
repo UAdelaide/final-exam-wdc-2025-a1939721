@@ -18,7 +18,7 @@ try{
             return res.status(401).json({error: 'Invalid credentials'})
         }
 
-        res.json
+        res.json({nessage: 'Login successful', user: row[0].role})
 }
 
 module.exports = router;
