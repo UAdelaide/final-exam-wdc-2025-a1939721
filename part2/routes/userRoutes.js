@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
     }
 
     const user = rows[0];
-    // store use in session
+    // store user in session
     req.session.user = {
       user_id: user.user_id,
       username: user.username,
