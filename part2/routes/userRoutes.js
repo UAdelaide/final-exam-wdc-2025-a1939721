@@ -68,7 +68,7 @@ router.post('/logout', (req, res) => ){
   req.session.destroy(err => {
     if(err){
       console.error('Failed to end the session');
-      ret8r
+      return res.status(500).json({})
     }
   })
 }
