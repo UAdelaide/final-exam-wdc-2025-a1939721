@@ -55,8 +55,10 @@
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
                 email: form.value.username,
+                password: form.value.password
               })
             });
+            
             const result = await res.json();
 
             if (!res.ok) throw new Error(result.error || 'Error logging in');
