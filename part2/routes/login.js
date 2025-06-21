@@ -12,7 +12,10 @@ try{
         SELECT role FROM Users
         WHERE username = ? AND
         password_hash = ?
-        `)
+        `,
+        [username, password]);
+
+        if
 }
 
 module.exports = router;
