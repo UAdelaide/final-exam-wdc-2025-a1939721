@@ -9,7 +9,7 @@ router.get('/dogs', async (req, res) => {
             d.dog_id
             d.name
             d.size,
-            d.owner_id
+            d.owner_id,
             u.username AS owner_username
             FROM Dogs d
             JOIN Users u ON d.owner_id = u.user_id
