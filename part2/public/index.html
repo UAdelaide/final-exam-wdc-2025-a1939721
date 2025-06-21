@@ -67,7 +67,9 @@
             };
 
             // redirect to the respective page
-            if(result.user.role === 'owner')
+            if(result.user.role === 'owner'){
+              window.location.href = '/owner-dashboard.'
+            }
 
           } catch (err) {
             error.value = err.message;
