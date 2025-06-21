@@ -4,10 +4,6 @@ require('dotenv').config();
 
 const app = express();
 
-const userRoutes = require('./routes/userRoutes');
-
-
-
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
