@@ -135,8 +135,9 @@
         async function loadMyDogs(){
           try{
             const res = await fetch ('/api/dogs/mydogs',{
-              credentials: 'include';
-            })
+              credentials: 'include'
+            });
+            if(!res.ok) throw new Error('Failed to fetch dogs')
           }
         }
 
