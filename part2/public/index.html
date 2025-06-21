@@ -50,8 +50,7 @@
 
             const result = await res.json();
 
-            if (!res.ok) throw new Error(result.error || 'Error logging in');
-
+            if (!res.ok) throw new Errorz(result.error || 'Error logging in');
 
             error.value = '';
             form.value = {
