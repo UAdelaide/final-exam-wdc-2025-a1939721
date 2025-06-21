@@ -68,7 +68,14 @@
         const message = ref('');
         const error = ref('');
 
-        onMouted
+        // Fetch dogs from the API on component mount
+    onMounted(async () => {
+      try {
+        const res = await fetch('/api/dogs');
+        if (!res.ok) throw new Error('Failed to fetch dogs');
+        dogs.value = await res.json();
+      }
+
 
         async function submitLogin() {
           try {
