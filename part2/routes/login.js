@@ -17,7 +17,13 @@ router.post('/login', async (req, res) =>{
     }
 
     res.json({
-        message: 'Login successful', user: row[0].role });
+        message: 'Login successful',
+        role: row[0].role
+    });
+
+    catch (err){
+        
+    }
 }
 })
 module.exports = router;
