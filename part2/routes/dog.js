@@ -28,7 +28,7 @@ router.get('/mydogs', async (req, res) => {
             d.dog_id,
             name
             FROM Dogs
-            WHERE owner_id = ?`, [userId]);
+            WHERE owner_id = ?`, [user_id]);
             res.json(rows);
     } catch(err){
         console.error('Error fetching data', err);
