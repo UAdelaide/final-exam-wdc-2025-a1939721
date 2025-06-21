@@ -3,7 +3,8 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
-const userRou
+
+const userRoutes = require('./routes/userRoutes')
 
 // Middleware
 app.use(express.json());
