@@ -132,7 +132,13 @@
         // fetch the owner's dogs
         const myDogs = ref([]);
 
-        async function loadMyDogs()
+        async function loadMyDogs(){
+          try{
+            const res = await fetch ('/api/dogs/mydogs',{
+              credentials: 'include';
+            })
+          }
+        }
 
 
         onMounted(() => {
