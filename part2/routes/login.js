@@ -4,7 +4,7 @@ const db = require('../models/db');
 
 // POST login
 router.post('/login', async (req, res) =>{
-    const {}
+    const { username, password } req.body;
 })
 
 module.exports = router;
