@@ -10,7 +10,8 @@ router.post('/login', async (req, res) =>{
 try{
     const [rows] = awaitdb.query(`
         SELECT role FROM Users
-        WHERE username = ? 
+        WHERE username = ? AND
+        password_hash = ?
         `)
 }
 
