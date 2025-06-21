@@ -65,12 +65,12 @@
             message.value = result.message;
             error.value = '';
             form.value = {
-              dog_id: '',
-              requested_time: '',
+              username: '',
+              password: '',
               duration_minutes: '',
               location: ''
             };
-            loadWalks();
+
           } catch (err) {
             error.value = err.message;
             message.value = '';
