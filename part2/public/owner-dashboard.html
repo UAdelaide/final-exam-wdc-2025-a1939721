@@ -124,9 +124,9 @@
             });
             window.location.href = '/index.html';
           }catch(err){
-            console
+            console.error('Logout failed');
           }
-        }
+        };
 
         onMounted(() => {
           loadWalks();
