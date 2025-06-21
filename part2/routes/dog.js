@@ -1,3 +1,6 @@
+var express = require('express');
+var router = express.Router();
+var db = require('../db');
 
 router.get('/dogs', async (req, res) => {
     try {
@@ -15,3 +18,5 @@ router.get('/dogs', async (req, res) => {
         res.status(500).json({error:'Server error'});
     }
 });
+
+module.exports = router;
