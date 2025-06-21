@@ -80,9 +80,10 @@
               const photoData = await photoRes.json();
               dog.photo = photoData.message;
             }
-            
+          } catch(err){
+            error.value = err.message;
           }
-        })
+        });
 
         async function submitLogin() {
           try {
